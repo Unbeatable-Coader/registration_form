@@ -1,0 +1,26 @@
+<h1>Registration Form<h1>
+<%= form_for @name, url: employee_path(@name), method: :post do |f| %>
+
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  
+    <%= f.label :city %>
+    <%= f.text_field :city %><br>
+
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+
+    <%= f.label :pincode %>
+    <%= f.text_field :pincode %>
+  
+    <%= f.submit "Sign Up" %><br>
+  
+    <%= link_to "log-in", "/login" %>
+<% end %>
